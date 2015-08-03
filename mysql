@@ -1,0 +1,41 @@
+drop database if exists daangelo;
+create database daangelo;
+
+use daangelo;
+	
+CREATE TABLE `Pizza` (
+`id` INT( 10 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`Pizza` VARCHAR( 250 ) NOT NULL ,
+`Zutaten` VARCHAR( 250 ) NOT NULL ,
+`Grösse klein` VARCHAR( 250 ) NULL ,
+`Preis klein` VARCHAR( 250 ) NULL,
+`Grösse gross` VARCHAR( 250 ) NULL ,
+`Preis gross` VARCHAR( 250 ) NULL 
+ );
+
+
+  INSERT INTO `Pizza` (`id`,`Pizza` , `Zutaten` , `Grösse klein` , `Preis klein` , `Grösse gross` , `Preis gross`) VALUES
+
+  (NULL , 'Pizza Margherita', 'Tomaten, Mozarella, Oregano', '32cm', '12.50.-' , '50cm', '27.00-' ),
+  (NULL , 'Pizza Napoletane', 'Tomaten, Mozzarella, Sardellen', '32cm', '14.50.-', '50cm', '30.00.-'),
+  (NULL , 'Pizza Prosciutto', 'Tomaten, Mozzarella, Vorderschinken', '32cm', '14.50.-', '50cm' , '30.00.-'),
+  (NULL , 'Pizza Prosciutto e Funghi', 'Tomaten, Mozzarella, Vorderschinken, Champignons, Oregano', '32cm', '14.50.-', '50cm', '30.00.-' ),
+  (NULL , 'Pizza Salame', 'Tomaten, Mozzarella, Salami, Oregano', '32cm', '14.50.-' , '50cm', '30.00.-' ),
+  (NULL , 'Pizza Salame e Funghi', 'Tomaten, Mozzarella, Salami, Champignons, Oregano', '32cm', '12.50.-' , '50cm', '30.00.-' ),
+  (NULL , 'Pizza Diavola (scharf)', 'Tomaten, Mozzarella, Peperoncini, Artischocken, scharfe Salami, Oregano', '32cm', '14.50.-', '50cm', '30.00.-'),
+  (NULL , 'Pizza Capriciosa', 'Tomaten, Mozzarella, Vorderschinken, Champignons, Artischocken, Oregano', '32cm', '14.50.-', '50cm' , '30.00.-'),
+  (NULL , 'Pizza Tonno', 'Tomaten, Mozzarella, Thunfisch, Kapern, Zwiebeln, Oregano', '32cm', '14.50.-' , '50cm', '30.00.-' ),
+  (NULL , 'Gorgonzola', 'Tomaten, Mozarella, Gorgonzola, Oregano', '32cm', '14.50.-', '50cm' , '30.00.-'),
+  (NULL , 'Quattro Formaggi', 'Tomaten, Mozarella, 4 verschiedene Käsesorten, Oregano', '32cm', '14.50.-', '50cm', '30.00.-'),
+  (NULL , 'La Bomba (sharf)', 'Tomaten, Mozarella, Hackfleisch, Artischocken, Steinpilz, Oregano', '32cm', '14.50.-' , '50cm', '30.00.-' ),
+  (NULL , 'Broccoli', 'Tomaten, Mozarella, Broccoli, Knoblauch, Oregano', '32cm', '14.50.-', '50cm' , '30.00.-'),
+  (NULL , 'Tomaten', 'Mozarella, Broccoli, Knoblauch, Oregano', '32cm', '14.50.-', '50cm', '30.00.-'),
+  (NULL , 'Pizza Quattro Stagioni', 'Tomaten, Mozzarella, Vorderschinken, Salami', '32cm', '14.50.-', '50cm', '30.00.-');
+
+
+CREATE TABLE `kommentar` (
+`id` INT( 10 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`Name` VARCHAR( 250 ) NOT NULL ,
+`Vorname` VARCHAR( 250 ) NOT NULL ,
+`Kommentar` VARCHAR( 250 ) NULL 
+ );
